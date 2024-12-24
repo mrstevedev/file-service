@@ -7,8 +7,8 @@ import { Request, Response, NextFunction } from "express";
 class MainController {
     @Route("get", "/healthcheck")
     public getHealthCheck(request: Request, response: Response, next: NextFunction) {
-        logging.info(MESSAGE.MESSAGE_UPLOADED_SUCCESSFULLY);
-        return response.status(200).json({ message: MESSAGE.MESSAGE_UPLOADED_SUCCESSFULLY });
+        logging.info(MESSAGE.MESSAGE_SUCCESS);
+        return response.status(200).json({ message: MESSAGE.MESSAGE_SUCCESS });
     }
 }
 
