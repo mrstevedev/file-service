@@ -5,7 +5,9 @@
     "main": "index.js",
     "scripts": {
         "server": "nodemon --exec ts-node ./src/server.ts",
-        "test": "jest --config ./jest.config.ts --coverage"
+        "test": "jest --config ./jest.config.ts --coverage",
+        "build": "NODE_ENV=production tsc",
+        "start": "NODE_ENV=production pm2 start ./dist/server.js"
     },
     "keywords": [],
     "author": "",
