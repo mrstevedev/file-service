@@ -12,7 +12,7 @@ export class UploadController {
     @UploadFileS3()
     public uploadFileToS3(request: Request, response: Response, next: NextFunction) {
         logging.info(MESSAGE.MESSAGE_UPLOADED_SUCCESSFULLY);
-        return response.status(200).json({ url: request.generateAndUploadFileToS3 });
+        return response.status(200).json({ message: request.generateAndUploadFileToS3 });
     }
 }
 
