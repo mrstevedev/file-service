@@ -6,6 +6,7 @@ export enum ERROR {
 }
 
 export enum MESSAGE {
+    MESSAGE_NO_FILE_FOUND = "No file attachment found",
     MESSAGE_SUCCESS = "Healthcheck called successfully",
     MESSAGE_UPLOADED_SUCCESSFULLY = "File uploaded successfully"
 }
