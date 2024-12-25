@@ -9,6 +9,7 @@ export function UploadFileS3() {
 
         // Only for express middleware
         descriptor.value = async function (req: Request, res: Response, next: NextFunction) {
+            if (!req.file) return res.status(404).json({ message: MESSAGE.MESSAGE_NO_FILE_FOUND });
             try {
                 const s3Params = {
                     Bucket: process.env.AWS_S3_BUCKET,
