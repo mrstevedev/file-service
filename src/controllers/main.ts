@@ -10,6 +10,12 @@ class MainController {
         logging.info(MESSAGE.MESSAGE_SUCCESS);
         return response.status(200).json({ message: MESSAGE.MESSAGE_SUCCESS });
     }
+
+    @Route("post", "/healthcheck")
+    public postHealthcheck(request: Request, response: Response, next: NextFunction) {
+        logging.info(MESSAGE.MESSAGE_SUCCESS);
+        return response.status(200).json({ message: MESSAGE.MESSAGE_SUCCESS });
+    }
 }
 
 export default MainController;
