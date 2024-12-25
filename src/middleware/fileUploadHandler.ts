@@ -9,6 +9,6 @@ export function fileUploadHandler(request: Request, response: Response, next: Ne
         } else if (err) {
             return response.status(500).json({ error: err.message });
         }
-        next();
     });
+    next();
 }
